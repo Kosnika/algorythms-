@@ -1,0 +1,6 @@
+def ix(d, x):
+  index = [ i for j in d for i in j].index(x)
+  row, col = index//len(d), index%len(d)
+  return [row, col]
+j = ix(d,0)[1]
+i = ix(d,0)[0]
