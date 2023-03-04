@@ -1,0 +1,7 @@
+import itertools 
+
+n = list(input())
+var = sorted(set(list(itertools.permutations(n))))
+var = [''.join(i) for i in var]
+for i in var:
+  print(i)
