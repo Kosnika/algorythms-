@@ -1,0 +1,12 @@
+import math 
+n = int(input())
+s = 0
+for i in range(2, math.floor(math.sqrt(n))+1):
+  if n%i==0:
+    s+=1
+    break
+if s==0: 
+  s = 'prime'
+else:
+s = 'norm'
+print(s)
