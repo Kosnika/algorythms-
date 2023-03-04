@@ -1,0 +1,13 @@
+a = int(input())
+n = int(input())
+
+def sys(a,n):
+  s = ''
+  while a > 0:
+    c = a%n
+    if c<10:
+      s = str(c) + s
+    else:
+        s = chr(ord('A') + c - 10) + s
+    a = a // n
+  return s
