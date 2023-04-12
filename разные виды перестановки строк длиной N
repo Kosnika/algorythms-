@@ -1,0 +1,27 @@
+#По данному числу N выведите все строки длины N из нулей и единиц в лексикографическом порядке.
+def func(arr, length):
+  if not length:
+    print(arr)
+    return
+  func(arr + '0', length - 1)
+  func(arr + '1', length - 1)
+
+
+n = int(input())
+d = ''
+func(d,n)
+
+
+
+
+#По данным числам N и K выведите все строки длины N из символов 0..K-1 в лексикографическом порядке.
+def func(d, l, k):
+    if l==0:
+        print(d)
+        return
+    for i in range(0,k):
+        func(d + str(i), l-1, k)
+n,k = map(int, input().split())
+d = ''
+func(d, n, k)
+        
