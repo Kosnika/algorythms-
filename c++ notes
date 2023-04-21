@@ -10,3 +10,5 @@
 *  int* d[10] = {};
 
 * #define SIZE 10
+
+*cin.ignore() - ставим после всех cin и до первого getline() после тех cin
