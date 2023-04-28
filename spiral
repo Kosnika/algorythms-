@@ -1,0 +1,38 @@
+n, m = map(int, input().split())
+d = [[0] * m for i in range(n)]
+k = 1
+m1 = m #hrt
+m2 =  n-1 #vrt
+krug = 0
+a = 0
+b = -1
+while k<=n*m:
+    for i in range(m1):
+        b+=1
+        d[a][b] = k
+        k+=1
+    m1-=1
+    
+    for i in range(m2):
+        a+=1
+        d[a][b] = k
+        k+=1
+    m2-=1
+    for i in range(m1):
+        b-=1
+        d[a][b] = k
+        k+=1
+    m1-=1
+    for i in range(m2):
+        a-=1
+        d[a][b] = k
+        k+=1
+
+    m2-=1
+    
+    
+for i in range(n):
+    for j in range(m):
+        print(d[i][j], end = ' ')
+    print()
+        
