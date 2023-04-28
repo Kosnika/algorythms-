@@ -1,0 +1,2 @@
+sbs = sorted(d, key=lambda tup: tup[1], reverse = True )   - sort by index 
+
