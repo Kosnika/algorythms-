@@ -1,0 +1,48 @@
+n = int(input())
+otvet = ''
+if n >= 1000:
+    temp = n//1000
+    otvet+= 'M'*temp
+    n%=1000
+    
+if n>=500:
+    if n//100 == 9:
+        otvet+='CM'
+        n%=900
+    else:
+        otvet+='D'
+        n%=500
+        
+if n//100 == 4:
+    otvet += 'CD'
+    n-=400
+temp = n//100
+otvet += 'C' * temp
+n%=100
+    
+if n >=50:
+    if n//10==9:
+        otvet += 'XC'
+        n-=90
+    else:
+        otvet += 'L'
+        n%=50
+      
+if n//10==4:
+    otvet += 'XL'
+    n-= 40
+else:
+    temp = n//10
+    otvet+= 'X'*temp
+    n%=10
+if n<10:
+    if n==4:
+        otvet+='IV'
+    elif n==9:
+        otvet+='IX'
+    elif n>4:
+        otvet+='V'
+        n-=5
+    if n<=3:
+        otvet+=n*'I'
+print(otvet)
