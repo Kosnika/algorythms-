@@ -1,0 +1,36 @@
+#include <iostream>
+#include <vector>
+#include <algorithm>
+#include <string>
+#include <iomanip>
+using namespace std;
+
+//vector <int> subset;
+//void search(int k) {
+//	
+//	if (k == n + 1) {
+//
+//	}
+//	else {
+//		subset.push_back(k);
+//		search(k + 1);
+//		subset.pop_back();
+//		search(k + 1);
+//	}
+//}
+////  1 2 3 
+
+vector <int> arr = { 1,2,3,4 };
+void outMas(const vector<int>& mas, int num, string s) {
+	if (num == mas.size()) {
+		cout << s << '\n';
+		return;
+	}
+	outMas(mas, num + 1, s);
+	s = s + to_string(mas[num]) + ' ';
+	outMas(mas, num + 1, s);
+}
+
+int main() {
+	outMas(arr, 0, "");
+}
